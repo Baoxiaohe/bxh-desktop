@@ -1,0 +1,17 @@
+﻿<Window x:Class="Baoxiaohe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:local="clr-namespace:Baoxiaohe"
+        mc:Ignorable="d"
+        Title="包小盒" Height="780" Width="1400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" x:Name="startArea">
+            <Image x:Name="logoStart" Source="images/logo.png" Width="750" Height="560"></Image>
+            <TextBlock Text="在线3D包装设计工具" HorizontalAlignment="Center" FontSize="45"></TextBlock>
+        </StackPanel>
+        <cefSharp:ChromiumWebBrowser Name="myChrome" Loaded="myChrome_Loaded" IsBrowserInitializedChanged="myChrome_IsBrowserInitializedChanged" Visibility="Hidden"/>
+    </Grid>
+</Window>
